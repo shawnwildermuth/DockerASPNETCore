@@ -1,0 +1,12 @@
+﻿FROM microsoft/aspnet
+
+#ADD /app
+
+#COPY . /app
+#WORKDIR /app
+
+#RUN ["dnu", "restore"]
+
+#EXPOSE 8080
+
+#ENTRYPOINT ["dnx", "web"]

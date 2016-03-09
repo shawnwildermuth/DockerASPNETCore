@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AEB76517-3E98-4C0F-A4C2-FC6B73ACC9DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A99206D7-8E4D-434A-9773-8D45A43BEE9C}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DockerASPNETCore", "src\DockerASPNETCore\DockerASPNETCore.xproj", "{517E0638-B5D4-47C1-9514-5E5402500581}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{517E0638-B5D4-47C1-9514-5E5402500581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517E0638-B5D4-47C1-9514-5E5402500581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517E0638-B5D4-47C1-9514-5E5402500581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517E0638-B5D4-47C1-9514-5E5402500581}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{517E0638-B5D4-47C1-9514-5E5402500581} = {AEB76517-3E98-4C0F-A4C2-FC6B73ACC9DA}
+	EndGlobalSection
+EndGlobal
