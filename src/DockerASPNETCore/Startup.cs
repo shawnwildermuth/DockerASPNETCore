@@ -5,19 +5,22 @@ using System.Threading.Tasks;
 using DockerASPNETCore.Services;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.StaticFiles;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.PlatformAbstractions;
 using Newtonsoft.Json.Serialization;
 
 namespace DockerASPNETCore
 {
   public class Startup
   {
-    public Startup(IHostingEnvironment env)
+    public Startup(IApplicationEnvironment env)
     {
       // Set up configuration sources.
       var builder = new ConfigurationBuilder()
+          .SetBasePath(env.ApplicationBasePath)
           .AddJsonFile("appsettings.json")
           .AddEnvironmentVariables();
       Configuration = builder.Build();
@@ -44,7 +47,6 @@ namespace DockerASPNETCore
       loggerFactory.AddConsole(Configuration.GetSection("Logging"));
       loggerFactory.AddDebug();
 
-      app.UseDefaultFiles();
       app.UseStaticFiles();
 
       app.UseMvc();
