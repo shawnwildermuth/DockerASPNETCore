@@ -6,6 +6,7 @@ using Microsoft.AspNet.Mvc;
 
 namespace DockerASPNETCore.Controllers
 {
+  [Route("[controller]")]
   public class RootController : Controller
   {
     [HttpGet("")]

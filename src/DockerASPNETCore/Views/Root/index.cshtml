@@ -8,11 +8,17 @@
 <body>
   <h3>Running in Docker!</h3>
   <ul>
-    <li>Environment Name: @env.EnvironmentName</li>
-    <li>Runtime Framework: @app.RuntimeFramework</li>
-    <li>Application Name: @app.ApplicationName</li>
-    <li>Application Ver: @app.ApplicationVersion</li>
-    <li>App Path: @app.ApplicationBasePath</li>
+    @if (env != null)
+    {
+      <li>Environment Name: @env.EnvironmentName</li>
+    }
+    @if (app != null)
+    {
+      <li>Runtime Framework: @app.RuntimeFramework</li>
+      <li>Application Name: @app.ApplicationName</li>
+      <li>Application Ver: @app.ApplicationVersion</li>
+      <li>App Path: @app.ApplicationBasePath</li>
+    }
   </ul>
 </body>
 </html>
